@@ -1,0 +1,241 @@
+:root {
+    --color: #FF6B82;
+    --unit-color: #000000;
+    --font-family: 'Inter', sans-serif;
+    --badge-color: #FFFFFF;
+}
+
+/* Container styling */
+.accordion-container {
+    font-family: Arial, sans-serif;
+    max-width: 400px;
+    margin: auto;
+    border: 1px solid #eaeaea;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--color);
+    margin-bottom: 20px;
+    font-family: var(--font-family);
+}
+
+/* Accordion item styling */
+.accordion-item {
+    border: 1px solid #eaeaea;
+    padding: 10px;
+    position: relative;
+    margin-bottom: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Expanded accordion content */
+.accordion-item.expanded {
+    border-color: var(--color);
+    position: relative; 
+    border-width: 2px;
+}
+
+.accordion-item .expanded-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out; 
+}
+
+/* Label and radio button styling */
+.accordion-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.radio-button {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--color);
+    border-radius: 50%;
+    position: relative;
+}
+
+.radio-button::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: var(--color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Item content styling */
+.item-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.item-unit {
+    font-weight: bold;
+    color: var(--unit-color);
+    font-family: var(--font-family);
+}
+
+.badge {
+    background-color: var(--color);
+    color: var(--badge-color);
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-family: var(--font-family);
+}
+
+.price-info {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.current-price {
+    font-weight: bold;
+    color: var(--unit-color);
+    font-family: var(--font-family);
+}
+
+.original-price {
+    color: #8e8e8e;
+    text-decoration: line-through;
+    font-size: 0.9em;
+    font-family: var(--font-family);
+    text-align: start;
+}
+
+.accordion-item .most-popular {
+    position: absolute;
+    top: -14px; 
+    left: 240px; 
+    right: 0;
+    font-weight: bold;
+    padding: 5px 10px; 
+    z-index: 1; 
+    background-color: var(--color);
+    color: var(--badge-color);
+}
+
+.label {
+    font-family: var(--font-family);
+    color: var(--unit-color);
+    font-size: 12px;
+}
+
+/* Options styling */
+.options {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-top: 1px solid #eaeaea;
+    margin-top: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown {
+    padding: 5px;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+}
+
+/* Cart section styling */
+.cart-section {
+    border-top: 1px solid #eaeaea;
+    padding-top: 15px;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.free-delivery {
+    color: var(--color);
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+.total-price {
+    color: var(--unit-color);
+    font-family: var(--font-family);
+}
+
+.add-to-cart {
+    background-color: var(--color);
+    color: var(--badge-color);
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .accordion-container {
+        padding: 15px;
+    }
+
+    .accordion-item {
+        padding: 8px;
+    }
+
+    .price-info {
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .accordion-item .most-popular {
+        left: auto;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .accordion-container {
+        padding: 10px;
+    }
+
+    .accordion-item {
+        padding: 6px;
+    }
+
+    .accordion-label {
+        gap: 5px;
+    }
+
+    .item-info {
+        gap: 3px;
+    }
+
+    .badge {
+        padding: 1px 4px;
+    }
+
+    .add-to-cart {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}

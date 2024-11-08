@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Example</title>
+    <link rel="stylesheet" href="accordian.css"> 
+</head>
+<body>
+    <div class="accordion-container">
+        <h2>YAY! It's BOGO</h2>
+
+        <!-- 1 Unit Option (Initially visible) -->
+        <div class="accordion-item" id="accordionItem1" onclick="toggleAccordion('accordionItem1', 'expandedContent1')">
+            <label class="accordion-label">
+                <input type="radio" name="unit" class="radio-input">
+                <!-- <span class="radio-button"></span> -->
+                <div class="item-content">
+                    <div class="item-info">
+                        <span class="item-unit">1 Unit</span>
+                        <span class="badge">10% Off</span>
+                    </div>
+                    
+                    <div class="price-info">
+                        <span class="current-price">$10.00 USD</span>
+                        <span class="original-price">$24.00 USD</span>
+                    </div>
+                </div>
+            </label>
+        </div>
+    
+        <!-- Expanded Options for 1 Unit (Initially hidden) -->
+        <div class="accordion-item expanded" id="expandedContent1" style="display: none;">
+            <label class="accordion-label">
+                <!-- <input type="radio" name="unit" class="radio-input"> -->
+                <span class="radio-button"></span>
+                <div class="item-content">
+                    <div class="item-info">
+                        <span class="item-unit">1 Unit</span>
+                        <span class="badge">10% Off</span>
+                    </div>
+                    <div class="price-info">
+                        <span class="current-price">$10.00 USD</span>
+                        <span class="original-price">$24.00 USD</span>
+                    </div>
+                </div>
+            </label>
+        
+            <!-- Dropdown options section for 1 Unit -->
+            <div class="options">
+                <div class="option">
+                    <label class="label">#1</label>
+                    <select class="dropdown">
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select class="dropdown">
+                        <option>Color</option>
+                        <option>Black</option>
+                        <option>White</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <label class="label">#2</label>
+                    <select class="dropdown">
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select class="dropdown">
+                        <option>Color</option>
+                        <option>Black</option>
+                        <option>White</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- 2 Unit Option (Initially visible) -->
+        <div class="accordion-item" id="accordionItem2" onclick="toggleAccordion('accordionItem2', 'expandedContent2')">
+            <label class="accordion-label">
+                <input type="radio" name="unit" class="radio-input">
+                <!-- <span class="radio-button"></span> -->
+                <div class="item-content">
+                    <div class="item-info">
+                        <span class="item-unit">2 Unit</span>
+                        <span class="badge">20% Off</span>
+                    </div>
+                    <div class="price-info">
+                        <span class="current-price">$18.00 USD</span>
+                        <span class="original-price">$24.00 USD</span>
+                    </div>
+                </div>
+            </label>
+        </div>
+
+        <!-- Expanded Options for 2 Units (Initially hidden) -->
+        <div class="accordion-item expanded" id="expandedContent2" style="display: none;">
+            <label class="accordion-label">
+                <!-- <input type="radio" name="unit" class="radio-input"> -->
+                <span class="radio-button"></span>
+                <div class="item-content">
+                    <div class="item-info">
+                        <span class="item-unit">2 Unit</span>
+                        <span class="badge">20% Off</span>
+                    </div>
+                    
+                    <div class="price-info">
+                        <span class="most-popular">MOST POPULAR</span>
+                        <span class="current-price">$18.00 USD</span>
+                        <span class="original-price">$24.00 USD</span>
+                    </div>
+                </div>
+            </label>
+            
+
+            <div class="options">
+                <div class="option">
+                    <label class="label">#1</label>
+                    <select class="dropdown">
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select class="dropdown">
+                        <option>Color</option>
+                        <option>Black</option>
+                        <option>White</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <label class="label">#2</label>
+                    <select class="dropdown">
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select class="dropdown">
+                        <option>Color</option>
+                        <option>Black</option>
+                        <option>White</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 Unit Option (Initially visible) -->
+        <div class="accordion-item" id="accordionItem3" onclick="toggleAccordion('accordionItem3', 'expandedContent3')">
+            <label class="accordion-label">
+                <input type="radio" name="unit" class="radio-input">
+                <!-- <span class="radio-button"></span> -->
+                <div class="item-content">
+                    <div class="item-info">
+                        <span class="item-unit">3 Unit</span>
+                        <span class="badge">30% Off</span>
+                    </div>
+                    <div class="price-info">
+                        <span class="current-price">$24.00 USD</span>
+                        <span class="original-price">$36.00 USD</span>
+                    </div>
+                </div>
+            </label>
+        </div>
+
+        <!-- Expanded Options for 3 Units (Initially hidden) -->
+        <div class="accordion-item expanded" id="expandedContent3" style="display: none;">
+            <label class="accordion-label">
+                <!-- <input type="radio" name="unit" class="radio-input"> -->
+                <span class="radio-button"></span>
+                <div class="item-content">
+                    <div class="item-info">
+                        <span class="item-unit">3 Unit</span>
+                        <span class="badge">30% Off</span>
+                    </div>
+                    <div class="price-info">
+                        <span class="current-price">$24.00 USD</span>
+                        <span class="original-price">$36.00 USD</span>
+                    </div>
+                </div>
+            </label>
+
+            <div class="options">
+                <div class="option">
+                    <label class="label">#1</label>
+                    <select class="dropdown">
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select class="dropdown">
+                        <option>Color</option>
+                        <option>Black</option>
+                        <option>White</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <label class="label">#2</label>
+                    <select class="dropdown">
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select class="dropdown">
+                        <option>Color</option>
+                        <option>Black</option>
+                        <option>White</option>
+                    </select>
+                </div>
+                <div class="option">
+                    <label class="label">#3</label>
+                    <select class="dropdown">
+                        <option>Size</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                    </select>
+                    <select class="dropdown">
+                        <option>Color</option>
+                        <option>Black</option>
+                        <option>White</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Section -->
+        <div class="cart-section">
+            <p class="free-delivery">Free Delivery</p>
+            <p class="total-price">Total: <strong>$24.00 USD</strong></p>
+        </div>
+        <button class="add-to-cart">+ Add to Cart</button>
+    </div>
+
+    <script src="accordian.js"></script>
+</body>
+</html>
